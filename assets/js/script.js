@@ -614,16 +614,10 @@ allTd();
 
 console.log('----------Esercizio 22----------');
 
-// function printOnConsole() {
-//   allTd().forEach((element) => {
-//     console.log(element.innerText);
-//   });
-// }
-
 function printOnConsole() {
-  for (let i = 0; i < allTd().length; i++) {
-    console.log(allTd()[i].innerText);
-  }
+  allTd().forEach((element) => {
+    console.log(element.innerText);
+  });
 }
 
 printOnConsole();
