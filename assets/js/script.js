@@ -178,7 +178,6 @@ function onlyLetters(string) {
   for (let i = 0; i < string.length; i++) {
     const char = string[i];
 
-    // Aggiungi solo se il carattere non è un numero o è uno spazio
     if (isNaN(parseInt(char)) || char === ' ') {
       result += char;
     }
@@ -615,10 +614,16 @@ allTd();
 
 console.log('----------Esercizio 22----------');
 
+// function printOnConsole() {
+//   allTd().forEach((element) => {
+//     console.log(element.innerText);
+//   });
+// }
+
 function printOnConsole() {
-  allTd().forEach((element) => {
-    console.log(element.innerText);
-  });
+  for (let i = 0; i < allTd().length; i++) {
+    console.log(allTd()[i].innerText);
+  }
 }
 
 printOnConsole();
