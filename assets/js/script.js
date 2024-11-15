@@ -270,10 +270,10 @@ console.log(rollTheDices(3));
 console.log('---------ESERCIZIO 9----------');
 
 function howManyDays(date) {
-  const nowDate = new Date();
+  const presentDate = new Date();
   const passedDate = new Date(date);
 
-  const difference = nowDate - passedDate;
+  const difference = presentDate - passedDate;
 
   const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
 
@@ -289,11 +289,11 @@ console.log(howManyDays('2024-11-5'));
 console.log('---------ESERCIZIO 10----------');
 
 function isTodayMyBirthday(date) {
-  const nowMonth = new Date().getMonth();
-  const nowDay = new Date().getDate();
+  const presentMonth = new Date().getMonth();
+  const presentDay = new Date().getDate();
   const myBDay = new Date(date);
 
-  if (myBDay.getMonth() === nowMonth && myBDay.getDate() === nowDay) {
+  if (myBDay.getMonth() === presentMonth && myBDay.getDate() === presentDay) {
     return true;
   } else {
     return false;
@@ -709,16 +709,14 @@ addClassToTrs();
 console.log('----------Esercizio 27----------');
 
 function halfTree(number) {
-  let half = '';
-  for (let i = 0; i < number; i++) {
-    half += '*';
-    console.log(half);
+  for (let i = 1; i <= number; i++) {
+    console.log('*'.repeat(i));
   }
 }
 
 console.log('Costruisco un mezzo albero di asterischi');
 
-halfTree(3);
+halfTree(7);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -736,24 +734,15 @@ console.log('----------Esercizio 27----------');
 
 function tree(number) {
   for (let i = 0; i < number; i++) {
-    let spaces = '';
-    let stars = '';
-
-    for (let j = 0; j < number - i - 1; j++) {
-      spaces += ' ';
-    }
-
-    for (let k = 0; k < i * 2 + 1; k++) {
-      stars += '*';
-    }
-
+    const spaces = ' '.repeat(number - i - 1);
+    const stars = '*'.repeat(2 * i + 1);
     console.log(spaces + stars);
   }
 }
-
 console.log('Costruisco un albero di asterischi');
 
-tree(3);
+tree(15);
+console.log('Merry Christmas!');
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
