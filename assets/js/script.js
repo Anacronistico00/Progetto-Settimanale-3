@@ -729,7 +729,7 @@ halfTree(7);
 
 */
 
-console.log('----------Esercizio 27----------');
+console.log('----------Esercizio 28----------');
 
 function tree(number) {
   for (let i = 0; i < number; i++) {
@@ -747,7 +747,7 @@ console.log('Merry Christmas!');
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-console.log('----------Esercizio 28----------');
+console.log('----------Esercizio 29----------');
 
 function isItPrime(number) {
   if (number < 2) {
@@ -766,4 +766,4 @@ function isItPrime(number) {
   }
 }
 
-console.log('Il numero dato è un numero primo? ' + isItPrime(13));
+console.log('Il numero dato è un numero primo? ' + isItPrime(17));
