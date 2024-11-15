@@ -323,6 +323,8 @@ console.log(
 );
 
 // Sposto l'array di oggetti 'movies'
+
+/* Questo array viene usato per gli esercizi. Non modificarlo. */
 const movies = [
   {
     Title: 'The Lord of the Rings: The Fellowship of the Ring',
@@ -777,5 +779,3 @@ function isItPrime(number) {
 }
 
 console.log('Il numero dato è un numero primo? ' + isItPrime(13));
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
