@@ -641,13 +641,54 @@ console.log('trasformo tutti i background dei link in rosso');
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+console.log('----------Esercizio 24----------');
+
+const list = document.getElementById('myList');
+
+function addToUl() {
+  const newLi = document.createElement('li');
+  newLi.innerText = 'quattro';
+  list.appendChild(newLi);
+}
+
+console.log('Aggiungo un nuovo elemento alla lista');
+
+addToUl();
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+console.log('----------Esercizio 25----------');
+
+function emptyTheList() {
+  const li = document.querySelectorAll('#myList li');
+
+  li.forEach((element) => {
+    return (element.innerText = '');
+  });
+}
+
+console.log('Svuoto la lista');
+emptyTheList();
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+console.log('----------Esercizio 26----------');
+
+const allTr = document.querySelectorAll('tr');
+
+function addClassToTrs() {
+  allTr.forEach((element) => {
+    element.classList.add('test');
+  });
+}
+
+console.log("Aggiungo la classe 'test' ad ogni tr nell'HTML");
+
+addClassToTrs();
 
 // [EXTRA] JS Avanzato
 
@@ -663,6 +704,20 @@ console.log('trasformo tutti i background dei link in rosso');
 
 */
 
+console.log('----------Esercizio 27----------');
+
+function halfTree(number) {
+  let half = '';
+  for (let i = 0; i < number; i++) {
+    half += '*';
+    console.log(half);
+  }
+}
+
+console.log('Costruisco un mezzo albero di asterischi');
+
+halfTree(3);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -675,8 +730,52 @@ console.log('trasformo tutti i background dei link in rosso');
 
 */
 
+console.log('----------Esercizio 27----------');
+
+function tree(number) {
+  for (let i = 0; i < number; i++) {
+    let spaces = '';
+    let stars = '';
+
+    for (let j = 0; j < number - i - 1; j++) {
+      spaces += ' ';
+    }
+
+    for (let k = 0; k < i * 2 + 1; k++) {
+      stars += '*';
+    }
+
+    console.log(spaces + stars);
+  }
+}
+
+console.log('Costruisco un albero di asterischi');
+
+tree(3);
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+console.log('----------Esercizio 28----------');
+
+function isItPrime(number) {
+  if (number < 2) {
+    console.log(
+      'Il numero è minore di 2, di conseguenza non può essere un numero primo.'
+    );
+    return;
+  }
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+console.log('Il numero dato è un numero primo? ' + isItPrime(13));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
