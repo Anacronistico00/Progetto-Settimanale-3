@@ -178,7 +178,7 @@ function onlyLetters(string) {
   for (let i = 0; i < string.length; i++) {
     const char = string[i];
 
-    if (isNaN(parseInt(char)) || char === ' ') {
+    if (isNaN(char) || char === ' ') {
       result += char;
     }
   }
